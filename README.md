@@ -34,35 +34,40 @@ Ctrl+P → > → Reopen in Container
 ![image](https://github.com/user-attachments/assets/cb65dee4-b4e7-413b-96f7-a62cc8340bc7)
 Esto cargará el entorno preconfigurado con todas las herramientas necesarias.
 
+
 ## Uso
-1. Inicia **SonarQube** dentro del DevContainer:
+#### 1. Abrir un nueva terminal:
+
+![image](https://github.com/user-attachments/assets/6b71140a-92dc-460f-b115-5f7c9ae561a7)
+#### 2. Situarse en el proyecto:
 ```sh
-docker-compose up -d
+cd practicaEstandares
 ```
-2. Accede a **SonarQube** en [http://localhost:9000](http://localhost:9000)
-3. Ejecuta la compilación y análisis con Maven:
+#### 3. Comprobar que maven este instalado:
 ```sh
-mvn clean install
-mvn sonar:sonar
+mvn -v
 ```
-
-## Resolución de Problemas
-Si encuentras problemas, revisa los siguientes puntos:
-- **Docker no inicia:** Asegúrate de que el servicio está corriendo.
-- **Puerto 9000 ocupado:** Cambia el puerto o detén otros procesos en conflicto.
-- **Error en DevContainer:** Asegúrate de que la extensión está instalada y usa la opción `Reopen in Container`.
-
-## Contribución
-Si deseas contribuir, sigue estos pasos:
-1. Haz un **fork** del repositorio
-2. Crea una rama (`git checkout -b feature-nueva`)
-3. Realiza tus cambios y haz **commit** (`git commit -m 'Agregando nueva característica'`)
-4. Sube los cambios (`git push origin feature-nueva`)
-5. Abre un **Pull Request**
-
-## Licencia
-Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo `LICENSE`.
-
-## Contacto
-Para dudas o sugerencias, abre un **issue** en el repositorio o contacta con el administrador.
+#### 4. Accede a **SonarQube** en [http://localhost:9000](http://localhost:9000)
+Con usuario y contraseña "admin". Esta contraseña la hemos especificado en el archivo docker-compose.yml, en el apartado de "environment". Como es el usuario admin, te pedirá una nueva contraseña que cumpla ciertos requisitos. Por ejemplo: admin123.
+#### 5. Una vez entremos en la interfaz web, deberíamos ver una pantalla como la que sigue. Después, procedemos a crear un proyecto manual.
+![image](https://github.com/user-attachments/assets/3216138c-034f-4b9e-a0a5-9c74c8746ebc)
+#### 6. Como se observa en la siguiente imagen, se ha puesto un nombre de ejemplo, pero puedes poner el más acorde según el proyecto que vayas a realizar. Y después elegiremos utilizar una configuración global.
+![image](https://github.com/user-attachments/assets/4f8653c8-1ba1-48c6-82f7-b692b89e4dc7)
+#### 7. Una vez llegados a este punto, ya tienes creado un proyecto base de SonarQube. Ahora, procederemos a analizar el repositorio de forma local. Si tienes dudas sobra su localización, puedes ver la siguiente imagen.
+![image](https://github.com/user-attachments/assets/14c20d09-8626-43d7-a535-224f1a65e3be)
+#### 8. Después, crearemos un token secreto y personal. Le podemos dar el nombre que nos parezca más oportuno y que sea funcional durante un tiempo determinado.
+![image](https://github.com/user-attachments/assets/208364a0-1eab-44f6-a5d3-787a471b7d2d)
+#### 9. Una vez reiniciado, volvemos a al VSCode e introducimos el token en el Run.sh
+![image](https://github.com/user-attachments/assets/00aa5652-cda5-43fb-91dd-34ab5ecc3dd8)
+#### 10. Antes de todo hay que instalar CheckStyle en SonarQube, tendremos que ir a ```Administration > Marteplace > Buscar: CheckStyle```. Despues, reiniciamos el server.
+![image](https://github.com/user-attachments/assets/19c8d4bb-cfd5-4871-a22b-f28b26bb0685)
+#### 11. Ahora ejecutamos en la terminal:
+```sh
+./Run.sh
+```
+Si no es posible habra que darle permisos de ejecución:
+```sh
+chmod +x Run.sh
+```
+### 12. Ahora ya podremos hacer la práctica.
 
