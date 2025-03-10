@@ -1,0 +1,1 @@
+mvn clean verify sonar:sonar   -Dsonar.projectKey=practicaEstandares   -Dsonar.host.url=http://sonarqube:9000   -Dsonar.login=sqp_5bd5a39346e05f756abd7850f1e26862f87d7a70   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml

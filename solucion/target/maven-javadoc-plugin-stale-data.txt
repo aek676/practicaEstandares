@@ -1,0 +1,53 @@
+@options
+@packages
+-classpath
+'/home/vscode/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/home/vscode/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/vscode/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/vscode/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/vscode/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/home/vscode/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/home/vscode/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/workspaces/dockerPracticaPris/solucion/src/main/java:/workspaces/dockerPracticaPris/solucion/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/workspaces/dockerPracticaPris/solucion/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'solucion 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'solucion 1.0-SNAPSHOT API'
+com.example
+/home/vscode/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar = 1686264060000
+/home/vscode/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1542650246000
+/home/vscode/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1536694843000
+/home/vscode/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1490936147000
+/home/vscode/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar = 1680540455000
+/home/vscode/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar = 1673284883000
+/home/vscode/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar = 1673409222000
+/workspaces/dockerPracticaPris/solucion/src/main/java = 1741616197931
+/workspaces/dockerPracticaPris/solucion/target/generated-sources/annotations = 1741617670218
+/workspaces/dockerPracticaPris/solucion/target/apidocs/allclasses-index.html = 1741617675449
+/workspaces/dockerPracticaPris/solucion/target/apidocs/allpackages-index.html = 1741617675456
+/workspaces/dockerPracticaPris/solucion/target/apidocs/copy.svg = 1741617675547
+/workspaces/dockerPracticaPris/solucion/target/apidocs/element-list = 1741617675313
+/workspaces/dockerPracticaPris/solucion/target/apidocs/help-doc.html = 1741617675527
+/workspaces/dockerPracticaPris/solucion/target/apidocs/index-all.html = 1741617675503
+/workspaces/dockerPracticaPris/solucion/target/apidocs/index.html = 1741617675516
+/workspaces/dockerPracticaPris/solucion/target/apidocs/link.svg = 1741617675554
+/workspaces/dockerPracticaPris/solucion/target/apidocs/member-search-index.js = 1741617675474
+/workspaces/dockerPracticaPris/solucion/target/apidocs/module-search-index.js = 1741617675461
+/workspaces/dockerPracticaPris/solucion/target/apidocs/overview-tree.html = 1741617675425
+/workspaces/dockerPracticaPris/solucion/target/apidocs/package-search-index.js = 1741617675466
+/workspaces/dockerPracticaPris/solucion/target/apidocs/script.js = 1741617675542
+/workspaces/dockerPracticaPris/solucion/target/apidocs/search-page.js = 1741617675573
+/workspaces/dockerPracticaPris/solucion/target/apidocs/search.html = 1741617675510
+/workspaces/dockerPracticaPris/solucion/target/apidocs/search.js = 1741617675566
+/workspaces/dockerPracticaPris/solucion/target/apidocs/stylesheet.css = 1741617675536
+/workspaces/dockerPracticaPris/solucion/target/apidocs/tag-search-index.js = 1741617675479
+/workspaces/dockerPracticaPris/solucion/target/apidocs/type-search-index.js = 1741617675469
