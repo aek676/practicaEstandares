@@ -1,8 +1,8 @@
 package com.example;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Represents a bank account with basic operations:
@@ -12,10 +12,12 @@ public class BankAccount {
 
   private static double defaultInterestRate = 0.0;
   private static String globalBankName = "BANK-MX";
+  SecureRandom random = new SecureRandom();
 
   private double balance;
   private String holderName;
   private final List<String> transactionHistory;
+  private String newBalance = " | New balance: ";
 
   /**
    * Creates a bank account with a given name and initial balance.
@@ -48,14 +50,14 @@ public class BankAccount {
       throw new IllegalArgumentException("Deposit amount must be greater than 0.");
     }
     balance += amount;
-    transactionHistory.add("Deposited " + amount + " | New balance: " + balance);
+    transactionHistory.add("Deposited " + amount + newBalance + balance);
   }
 
   /**
    * Withdraws an amount from the account.
    *
-   * @param amount The amount to withdraw (must be {@literal >} 0 and {@literal <=} current balance).
-   * @throws IllegalArgumentException if amount {@literal <=} 0 or amount {@literal >} current balance.
+   * @param amount Amount to withdraw (must be {@literal >} 0 and {@literal <=} current balance).
+   * @throws IllegalArgumentException if amount {@literal <=} 0 or {@literal >} current balance.
    */
   public void withdraw(double amount) {
     if (amount <= 0) {
@@ -65,7 +67,7 @@ public class BankAccount {
       throw new IllegalArgumentException("Insufficient balance to withdraw " + amount);
     }
     balance -= amount;
-    transactionHistory.add("Withdrew " + amount + " | New balance: " + balance);
+    transactionHistory.add("Withdrew " + amount + newBalance + balance);
   }
 
   /**
@@ -78,7 +80,7 @@ public class BankAccount {
       balance += interest;
       transactionHistory.add("Applied interest: " + interest
           + " at rate " + defaultInterestRate
-          + " | New balance: " + balance);
+          + newBalance + balance);
     } else {
       transactionHistory.add("No interest applied (rate <= 0).");
     }
@@ -89,10 +91,11 @@ public class BankAccount {
    * The bonus is a random integer between 1 and 1000.
    */
   public void applyRandomBonus() {
-    Random random = new Random();
+    byte[] bytes = new byte[20];
+    random.nextBytes(bytes);
     int bonus = random.nextInt(1000) + 1; // Range 1..1000
     balance += bonus;
-    transactionHistory.add("Random bonus of " + bonus + " applied | New balance: " + balance);
+    transactionHistory.add("Random bonus of " + bonus + " applied " + newBalance + balance);
   }
 
   /**
@@ -115,8 +118,9 @@ public class BankAccount {
 
   /**
    * Changes the account holder name.
+   * 
    * @param newHolder The new holder name (non-null, non-empty).
-   * @throws IllegalArgumentException if newHolder is invalid
+   * @throws IllegalArgumentException if newHolder is invalid.
    */
   public void setHolderName(String newHolder) {
     if (newHolder == null || newHolder.trim().isEmpty()) {
@@ -177,8 +181,8 @@ public class BankAccount {
   /**
    * Sets the global bank name.
    *
-   * @param globalBankNameParam the name of the global bank to set
-   * @throws IllegalArgumentException if the bank name is null or empty
+   * @param globalBankNameParam the name of the global bank to set.
+   * @throws IllegalArgumentException if the bank name is null or empty.
    */
   public static void setGlobalBankName(String globalBankNameParam) {
     if (globalBankNameParam == null || globalBankNameParam.trim().isEmpty()) {
