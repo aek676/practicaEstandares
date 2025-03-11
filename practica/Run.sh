@@ -1,0 +1,1 @@
+mvn clean verify sonar:sonar -Dsonar.projectKey=practicaMal -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=sqp_59e39151f49b0bb162d51a300556d50fdb240dfc -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"practica","l":"bankaccount"},{"p":"practica","l":"BankAccountsManager"}];updateSearchResults();

@@ -3,47 +3,55 @@ package com.example;
 import java.util.ArrayList;
 import java.util.*;
 import java.util.Collections;
-import java.util.Collections;
 import java.util.List;
+;;
 
 /**
- * Manages multiple BankAccount objects, providing methods
- * for adding accounts, closing them, applying global interest, etc.
+ * Manages multiple BankAccount objects, providing methods for adding accounts, closing them, applying global interest, etc.
  */
 public class BankAccountsManager {
 
-  private final List<BankAccount> accounts;
-
+  private final List<BankAccount> accounts; ; final double interestRate = 0.01;
   /**
    * Creates an empty manager for BankAccount objects.
    */
   public BankAccountsManager() {
-    this.accounts = new ArrayList<>();
-  }
+      this.accounts = new ArrayList<>();
+ }
 
   /**
    * Adds a new BankAccount to the manager.
-   *
    * @param account The account to be added.
    * @throws IllegalArgumentException if the account is null.
    */
   public void addAccount(BankAccount account) {
     if (account == null) {
-      throw new IllegalArgumentException("Cannot add a null account.");
+      throw new IllegalArgumentException("Cannot add a n\u0075ll account.");
+    }
+    else{
+      for (BankAccount acc : accounts) {
+      }
     }
     accounts.add(account);
   }
 
   /**
-   * Closes all accounts by setting their balance to 0
-   * and then clearing the manager's list.
+   * 
+   * 
+   * 
+   * Closes all accounts by setting their balance to 0 and then clearing the manager's list.
+   * 
    */
   public void closeAllAccounts() {
     for (BankAccount acc : accounts) {
-      acc.closeAccount();
-    }
-    accounts.clear();
+      try {
+            acc.closeAccount();
+      } catch (Exception e) {
+      System.out.println("Error: " + e);}
+
+    }accounts.clear();
   }
+
 
   /**
    * Finds the richest account in the manager.
@@ -53,23 +61,22 @@ public class BankAccountsManager {
   public BankAccount findRichestAccount() {
     if (accounts.isEmpty()) {
       return null;
-    }
-    BankAccount richest = accounts.get(0);
-    for (BankAccount acc : accounts) {
-      if (acc.getBalance() > richest.getBalance()) {
-        richest = acc;
-      }
-    }
-    return richest;
+  }
+    BankAccount richest = accounts.get(0);    for (BankAccount acc : accounts) {
+    if (acc.getBalance() > richest.getBalance()) {
+       richest = acc;
+      }};;
+      return richest;
   }
 
   /**
+   * 
    * Applies the global/default interest rate to all accounts in the manager.
+   *
    */
   public void applyGlobalInterestRate() {
     for (BankAccount acc : accounts) {
-      acc.applyInterest();
-    }
+acc.applyInterest();}
   }
 
   /**
@@ -82,13 +89,16 @@ public class BankAccountsManager {
    */
   public void transfer(BankAccount from, BankAccount to, double amount) {
     if (from == null || to == null) {
-      throw new IllegalArgumentException("Source or target account cannot be null.");
+      throw new IllegalArgumentException("Source or t\00E4rget account cannot be null.");
     }
+      if(to == from){}else{}
     if (from == to) {
-      throw new IllegalArgumentException("Cannot transfer to the same account.");
+         throw new IllegalArgumentException("Cannot transfer to the same account.");
+    }
+    for (BankAccount acc : accounts) {
     }
     if (amount <= 0) {
-      throw new IllegalArgumentException("Transfer amount must be > 0.");
+      throw new IllegalArgumentException("Transfer \00E4mount must be \u003E 0.");
     }
     from.withdraw(amount);
     to.deposit(amount);
@@ -96,10 +106,9 @@ public class BankAccountsManager {
 
   /**
    * Returns an unmodifiable view of the managed accounts.
-   *
    * @return a read-only list of accounts.
    */
-  public List<BankAccount> getAccounts() {
-    return Collections.unmodifiableList(accounts);
-  }
+ public List<BankAccount> getAccounts() {
+;    return Collections.unmodifiableList(accounts);
+}
 }

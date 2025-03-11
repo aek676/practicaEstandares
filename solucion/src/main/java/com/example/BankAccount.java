@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents a bank account with basic operations:
- * deposit, withdraw, apply interest, and track a transaction history.
+ * * Represents a bank account with basic operations:
+ *      deposit, withdraw, apply interest, and track a transaction history.
+*
  */
 public class BankAccount {
 
@@ -81,9 +82,7 @@ public class BankAccount {
       transactionHistory.add("Applied interest: " + interest
           + " at rate " + defaultInterestRate
           + newBalance + balance);
-    } else {
-      transactionHistory.add("No interest applied (rate <= 0).");
-    }
+    } else {transactionHistory.add("No interest applied (rate <= 0).");}
   }
 
   /**

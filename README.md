@@ -3,7 +3,7 @@
 ## Descripción
 Este proyecto contiene una configuración estándar para analizar código utilizando **SonarQube** dentro de un **DevContainer** en Visual Studio Code. Facilita la evaluación de calidad de código en proyectos Java mediante Maven y SonarQube.
 
-## Características
+## Caracter\u00EDsticas
 - ✅ Uso de **SonarQube** para análisis de calidad del código
 - ✅ Configuración de **DevContainer** para entorno de desarrollo sin necesidad de instalación manual
 - ✅ Integración con **Maven** para ejecución automática del análisis
@@ -49,7 +49,7 @@ mvn -v
 ```
 #### 4. Accede a **SonarQube** en [http://localhost:9000](http://localhost:9000)
 Con usuario y contraseña "admin". Esta contraseña la hemos especificado en el archivo docker-compose.yml, en el apartado de "environment". Como es el usuario admin, te pedirá una nueva contraseña que cumpla ciertos requisitos. Por ejemplo: admin123.
-#### 5. Una vez entremos en la interfaz web, deberíamos ver una pantalla como la que sigue. Después, procedemos a crear un proyecto manual.
+#### 5. Una vez entremos en la interfaz web, deber\u00EDamos ver una pantalla como la que sigue. Después, procedemos a crear un proyecto manual.
 ![image](https://github.com/user-attachments/assets/3216138c-034f-4b9e-a0a5-9c74c8746ebc)
 #### 6. Como se observa en la siguiente imagen, se ha puesto un nombre de ejemplo, pero puedes poner el más acorde según el proyecto que vayas a realizar. Y después elegiremos utilizar una configuración global.
 ![image](https://github.com/user-attachments/assets/4f8653c8-1ba1-48c6-82f7-b692b89e4dc7)
